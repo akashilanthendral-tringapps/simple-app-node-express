@@ -8,7 +8,7 @@ const PORT  = 5000;
 app.listen(PORT, async ()=>{
     console.log(`APP started at ${PORT}`);
     try{
-        await sequelize.sync();
+        await sequelize.authenticate();
     }catch(e){
         console.log(e);
     }
